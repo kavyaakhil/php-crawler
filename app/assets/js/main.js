@@ -22,6 +22,7 @@ $(document).ready( function() {
 
         if(data.status === "success") {
           var resultdiv = "<div class='row'><ul class='list-group'>";
+          resultdiv += "<li class='list-group-item'>Number of pages crawled: "+ data.number_of_pages_crawled + "</li>";
           resultdiv += "<li class='list-group-item'>Number of unique images: "+ data.number_of_unique_imgs + "</li>";
           resultdiv += "<li class='list-group-item'>Number of unique internal links: "+ data.number_of_unique_internal_links + "</li>";
           resultdiv += "<li class='list-group-item'>Number of unique external links: "+ data.number_of_unique_external_links + "</li>";

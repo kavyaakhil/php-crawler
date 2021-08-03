@@ -81,6 +81,7 @@ class Crawler extends Controller {
       $avg_word_count = ($total_word_count > 0) ? $total_word_count/$depth : 0;
       $avg_title_length = ($total_title_length > 0) ? $total_title_length/$depth : 0;
 
+      $data['number_of_pages_crawled'] = $depth;
       $data['number_of_unique_imgs'] = count(array_unique($total_imgs));
       $data['number_of_unique_internal_links'] = count(array_unique($total_internal_links));
       $data['number_of_unique_external_links'] = count(array_unique($total_external_links));
