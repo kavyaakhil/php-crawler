@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# If the file or directory exists, exit
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .? - [END]
+
+RewriteRule ^([^/]+)/([0-9]+)$ index.php?controller=$1&method=$2&param=$3 [L]
+RewriteRule ^([^/]+)/([a-z0-9]+)$ index.php?controller=$1&method=$2&param=$3 [NC,L]
+RewriteRule ^([^/]+)$ index.php?controller=$1 [L]
